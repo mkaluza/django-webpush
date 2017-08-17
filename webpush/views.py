@@ -63,6 +63,10 @@ def generate_manifest(request):
 def process_subscription_data(post_data):
     """Process the subscription data according to out model"""
     subscription_data = post_data.pop("subscription", {})
+
+    ''' Added by @ryanflores79 '''
+    subscription_data.pop('expirationTime', None)
+
     # As our database saves the auth and p256dh key in separate field,
     # we need to refactor it and insert the auth and p256dh keys in the same dictionary
     keys = subscription_data.pop("keys", {})
