@@ -33,6 +33,7 @@ setup(
         'Topic :: Internet :: WWW/HTTP :: Dynamic Content',
     ],
     install_requires=[
+	'pyelliptic<=1.5.7',
         'pywebpush==0.6.1'
     ]
 )
